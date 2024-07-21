@@ -1,0 +1,9 @@
+html,
+body {
+  min-height: 100%;
+  min-width: 100%;
+}
+div {
+  background-color: blue;
+  color: yellow;
+}

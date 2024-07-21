@@ -1,21 +1,36 @@
-<!doctype html>
-<html>
-<head lang='en'>
-	<meta charset='utf-8'>
-	<meta name='viewport' content='width=device-width'>
-	<title>rollup-starter-app</title>
-
-	<style>
-		body {
-			font-family: 'Helvetica Neue', Arial, sans-serif;
-			color: #333;
-			font-weight: 300;
-		}
-	</style>
-</head>
-<body>
-	<h1>rollup-starter-app</h1>
-	<p>The time is <span id='time-now'>...</span></p>
-	<script src='bundle.js'></script>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>rollup-starter-app</title>
+    <style>
+      *,
+      *:before,
+      *:after {
+        margin: 0;
+        padding: 0;
+        box-sizing: inherit;
+      }
+      body {
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        background-color: #333;
+        color: #fff;
+        font-weight: 300;
+      }
+      @media (prefers-color-scheme: light) {
+        body {
+          background-color: #fff;
+          color: #000;
+        }
+      }
+    </style>
+    <link href="style.css" fetch-priority="high" as="style" rel="stylesheet" />
+  </head>
+  <body>
+    <h1>starter-app-now</h1>
+    <p>The time is <span id="time-now">...</span></p>
+    <div>This is a new div to include.</div>
+    <script type="module" src="bundle.js"></script>
+  </body>
 </html>
