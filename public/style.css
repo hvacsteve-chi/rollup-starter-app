@@ -48,7 +48,7 @@ header .header-wrapper{
   display: grid;
   place-items: center;
   grid-template-columns: auto 1fr auto;
-  background:rgb(177, 176, 176);
+  background:rgba(177, 176, 176, 0.76);
   border:1px solid white;
 }
 header .header-wrapper h1{
@@ -65,7 +65,7 @@ main .main-wrapper{
   width:calc(100% - px);
   display: grid;
   place-items: center;
-  background:rgb(119, 166, 182);
+  background:rgba(119, 166, 182, 0.76);
   border:1px solid white;
 
 }
@@ -81,7 +81,7 @@ footer .footer-wrapper{
   width:calc(100% - 2px);
   display: grid;
   place-items: center;
-  background:rgb(137, 180, 137);
+  background:rgba(137, 180, 137, 0.76);
   border:1px solid white;
 }
 
