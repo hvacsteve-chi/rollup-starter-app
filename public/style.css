@@ -40,14 +40,14 @@ header {
   max-height: 65px;
   background: pink;
   color: black;
+  padding:0 5px;
 }
 header .header-wrapper{
   height:100%;
-  width:100%;
   display: grid;
   place-items: center;
   grid-template-columns: auto 1fr auto;
-  background:pink;
+  background:rgb(177, 176, 176);
 }
 header .header-wrapper h1{
   font-size:calc(2.4rem + 0.18vw);
@@ -56,26 +56,26 @@ main {
   height: 100%;
   background: lightblue;
   color: black;
+  padding:0 5px;
 }
 main .main-wrapper{
   height:100%;
-  width:100%;
   display: grid;
   place-items: center;
+  background:rgb(119, 166, 182);
 }
 footer {
   height: 100%;
   min-height: 65px;
   background: lightgreen;
   color: black;
-  display: grid;
-  place-items: center;
+  padding: 0 5px;
 }
 footer .footer-wrapper{
   height:100%;
-  width:100%;
   display: grid;
   place-items: center;
+  background:rgb(137, 180, 137);
 }
 
 @media (prefers-color-scheme: light) {
