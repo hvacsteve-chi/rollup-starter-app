@@ -59,7 +59,7 @@ header .header-wrapper{
   border:1px solid white;
 }
 header .header-wrapper nav{
-  margin: 0 4px;
+  margin: 0 6px 0 4px;
   height:48px;
   width:48px;
   background:hsla(0, 0%, 100%, 0.76);
