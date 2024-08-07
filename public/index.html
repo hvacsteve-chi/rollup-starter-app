@@ -43,6 +43,8 @@
     <link rel="canonical" href="https://fonts.google.com/icons"/>
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <style>
       *{
 			margin:0;
@@ -59,25 +61,38 @@
   <body>
 
 		<header>
+      <div class="header-wrapper">
 
-      <span id="headerHeight"></span>
+        <nav>
+          <i class="material-symbols-outlined">menu</i>
+        </nav>
 
+        <span id="headerHeight"></span>
+
+        <h1>LOGO</h1>
+
+      </div>
 		</header>
 
-		<main>
+    <main>
+      <div class="main-wrapper">
+        
+        <span id="time-now">...</span>
 
-			<span id="time-now">...</span>
+			  <span id="mainHeight"></span>
 
-			<span id="mainHeight"></span>
-
+      </div>
 		</main>
 
 		<footer>
+      <div class="footer-wrapper">
 
-      <span id="footerHeight"></span>
+        <span id="footerHeight"></span>
 
+      </div>
     </footer>
 
     <script type="module" src="bundle.js"></script>
+
   </body>
 </html>
