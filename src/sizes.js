@@ -13,4 +13,5 @@ export default function sizes(){
   headerSpan.innerText = hh + "px";
   mainSpan.innerText = mh + "px";
   footerSpan.innerText = fh + "px";
+  
 }
