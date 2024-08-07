@@ -58,8 +58,8 @@ main .main-wrapper{
   display: grid;
   place-items: center;
 }
-header h1{
-  font-size:calc(2.4rem + 0.18vw)
+header .main-wrapper h1{
+  font-size:calc(2rem + 0.18vw);
 }
 footer {
   height: 100%;
