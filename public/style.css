@@ -51,14 +51,27 @@ main {
   height: 100%;
   background: lightblue;
   color: black;
+}
+main .main-wrapper{
+  height:100%;
+  width:100%;
   display: grid;
   place-items: center;
+}
+header h1{
+  font-size:calc(2.4rem + 0.18vw)
 }
 footer {
   height: 100%;
   min-height: 65px;
   background: lightgreen;
   color: black;
+  display: grid;
+  place-items: center;
+}
+footer .footer-wrapper{
+  height:100%;
+  width:100%;
   display: grid;
   place-items: center;
 }
