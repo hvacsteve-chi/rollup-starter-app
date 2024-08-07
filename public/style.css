@@ -47,6 +47,7 @@ header .header-wrapper{
   display: grid;
   place-items: center;
   grid-template-columns: auto 1fr auto;
+  background:pink;
 }
 header .header-wrapper h1{
   font-size:calc(2.4rem + 0.18vw);
