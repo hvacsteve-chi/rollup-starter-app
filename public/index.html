@@ -50,21 +50,31 @@
 			-moz-text-size-adjust: 100%;
 			text-size-adjust:100%;
 		}
-
     </style>
 		<link rel="stylesheet" href="style.css" />
   </head>
   <body>
+
 		<header>
-			<h1>Our new app</h1>
+
+      <span id="headerHeight"></span>
+
 		</header>
+
 		<main>
-			<p>The time is <span id="time-now">...</span></p>
-			<p>header height is <span id="headerHeight"></span></p>
-			<p>main height is <span id="mainHeight"></span></p>
-			<p>footer height is <span id="footerHeight"></span></p>
+
+			<span id="time-now">...</span>
+
+			<span id="mainHeight"></span>
+
 		</main>
-		<footer>footer</footer>
+
+		<footer>
+
+      <span id="footerHeight"></span>
+
+    </footer>
+
     <script type="module" src="bundle.js"></script>
   </body>
 </html>

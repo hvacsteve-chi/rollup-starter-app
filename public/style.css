@@ -21,7 +21,7 @@ body{
   gap:1rem;
   font-size:calc(2.1rem + 0.18vw);
   overflow-x:hidden;
-  overflow-y:scroll;
+  overflow-y:auto;
   background-color:#212123;
   color:#f2f2f2;
 }
