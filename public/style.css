@@ -23,7 +23,7 @@ body {
   gap: 1rem;
   font-size: calc(2.1rem + 0.18vw);
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: auto;
   background-color: #212123;
   color: #f2f2f2;
 }
@@ -37,6 +37,7 @@ body {
 header {
   height: 100%;
   min-height: 65px;
+  max-height: 65px;
   background: pink;
   color: black;
 }
@@ -46,6 +47,9 @@ header .header-wrapper{
   display: grid;
   place-items: center;
   grid-template-columns: auto 1fr auto;
+}
+header .header-wrapper h1{
+  font-size:calc(2rem + 0.18vw);
 }
 main {
   height: 100%;
@@ -57,9 +61,6 @@ main .main-wrapper{
   width:100%;
   display: grid;
   place-items: center;
-}
-header .main-wrapper h1{
-  font-size:calc(2rem + 0.18vw);
 }
 footer {
   height: 100%;
