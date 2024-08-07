@@ -10,6 +10,13 @@ html {
   overflow: hidden;
   white-space: normal;
   text-overflow: ellipsis;
+  text-wrap:balance;
+  -webkit-overscroll-behavior:contain;
+  overscroll-behavior: contain;
+  overflow-wrap: break-word;
+  accent-color: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
 }
 body {
   min-height: 100%;
@@ -51,8 +58,32 @@ header .header-wrapper{
   background:rgba(177, 176, 176, 0.76);
   border:1px solid white;
 }
+header .header-wrapper nav{
+  margin: 0 4px;
+  height:48px;
+  width:48px;
+  background:hsla(0, 0%, 100%, 0.76);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  border-radius:4px;
+  appearance: none;
+  -webkit-user-select:none;
+  user-select: none;
+  cursor: pointer;
+  outline:none;
+  -webkit-tap-highlight-color: transparent;
+  tap-highlight-color:transparent;
+  touch-action: manipulation;
+  transition:all;
+  will-change:auto;
+}
+header .header-wrapper nav:is(:hover,:focus){
+  background:hsla(0, 0%, 100%, 0.46);
+  transform: all 200ms ease-in-out;
+}
 header .header-wrapper h1{
-  font-size:calc(2.4rem + 0.18vw);
+  font-size:calc(2.8rem + 0.18vw);
 }
 main {
   height: 100%;
