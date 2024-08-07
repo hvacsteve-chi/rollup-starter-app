@@ -21,7 +21,7 @@ body {
   grid-template-rows: auto calc(100dvh - 65px - 2rem) auto;
   grid-template-rows: auto 1fr auto;
   gap: 1rem;
-  font-size: calc(2.1rem + 0.18vw);
+  font-size: calc(2.8rem + 0.18vw);
   overflow-x: hidden;
   overflow-y: auto;
   background-color: #212123;
