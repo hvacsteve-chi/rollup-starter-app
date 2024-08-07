@@ -6,7 +6,7 @@ var mainSpan = document.querySelector("#mainHeight");
 var footerSpan = document.querySelector("#footerHeight");
 
 export default function sizes(){
-  headerSpan.innerText = "hh: " + hh;
-  mainSpan.innerText = "mh: " + mh;
-  footerSpan.innerText = "fh: " + fh;
+  headerSpan.innerText = hh + "px";
+  mainSpan.innerText = mh + "px";
+  footerSpan.innerText = fh + "px";
 }
