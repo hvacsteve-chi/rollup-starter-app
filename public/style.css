@@ -53,7 +53,6 @@ header .header-wrapper{
 }
 header .header-wrapper h1{
   font-size:calc(2.4rem + 0.18vw);
-  max-height: 3rem;
 }
 main {
   height: 100%;
