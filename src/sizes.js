@@ -1,6 +1,6 @@
 var docEl = document.documentElement;
 var pageWidth = docEl.clientWidth;
-console.log(pageWidth);
+console.log(pageWidth + "px wide");
 var hh = document.querySelector("header").clientHeight;
 var mh = document.querySelector("main").clientHeight;
 var fh = document.querySelector("footer").clientHeight;
