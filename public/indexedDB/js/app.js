@@ -271,3 +271,10 @@ request.onsuccess = (event) => {
 };
 
 })();
+
+// SUMMARY
+
+// - The IndexedDB is a large-scale object stored in web browsers.
+// - The IndexedDB stores data as key-value pairs.  The values can be any data including simple and complex ones.
+// - The IndexedDB consists of one or more databases.  Each database has one or more object stores. Typically, you create a database in the IndexedDB per web application.
+// - The IndexedDB is useful for web applications that don't require a persistent internet connection, especially for application that work both online and offline.
