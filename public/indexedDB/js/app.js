@@ -196,6 +196,79 @@ request.onsuccess = (event) => {
 // 7) Read all data from an object store
 // The following shows how to use a cursor to read all the objects from the Contacts object store:
 
+function getAllContacts(db){
+  const txn = db.transaction('Contacts', "readonly");
+  const objectStore = txn.objectStore('Contacts');
+
+  objectStore.openCursor().onsuccess = (event) => {
+    let cursor = event.target.result;
+    if(cursor) {
+      let contact = cursor.value;
+      console.log(contact);
+      // continue next record
+      cursor.continue();
+    }
+  };
+  // close the database connection
+  txn.oncomplete = function() {
+    db.close();
+  };
+}
+// The objectStore.openCursor() returns a cursor used to iterate over an object store.
+// To iterate over the objects in an object store using the cursor, you need to assign an onsuccess handler:
+
+objectStore.openCursor().onsuccess = (event) => {
+  // ...
+};
+
+// the event.target.result returns the cursor.  To get the data, you use the cursor.value property.
+// the cursor.continue() method advances the cursor to the position of the next record in the object store.
+// The following calls the getAllContacts() in the onsuccess event handler to show all data from the Contacts object store:
+
+request.onsuccess = (event) => {
+  const db = event.target.result;
+  // get all contacts
+  getAllContacts(db);
+};
+
+// 8) Delete a contact
 
 
+// To delete a record from the object store, you use the delete()method of the object store.
+// The following function deletes a contact by its id from the Contacts object store:
+
+function deleteContact(db, id){
+
+  // create a new transaction
+  const txn = db.transaction('Contacts', 'readwrite');
+
+  // get the Contacts object store
+  const store = txn.objectStore('Contacts');
+  //
+  let query = store.delete(id);
+
+  // handle the success case
+  query.onsuccess = function (event) {
+    console.log(event);
+  };
+
+  // handle the error case
+  query.onerror = function (event) {
+    console.log(event.target.errorCode);
+  }
+
+  // close the database once the transaction completes
+  txn.oncomplete = function () {
+    db.close();
+  };
+}
+
+// And you can call the deleteContact() function in the onsuccess event handler to delete the contact with id 1 as follows:
+
+request.onsuccess = (event) => {
+  const db = event.target.result;
+  deleteContact(db, 1);
+};
+
+}
 })();
