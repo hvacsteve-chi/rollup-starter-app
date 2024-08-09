@@ -49,7 +49,7 @@
   // How it works.
 
   // -  First, get the IDBDatabase instance from the event.target.result and assign it to the db variable.
-  // - Second, call the createObjectStore() method to create the Contacts object store with the autoincrement key. It means that the IndexedDB will generate an auto-increment number starting at one as the key for every new object inserted into the Contact object store.
+  // - Second, call the createObjectStore() method to create the Contacts object store with the auto increment key. It means that the IndexedDB will generate an auto-increment number starting at one as the key for every new object inserted into the Contact object store.
   // - Third, call the createIndex() method to create an index on the email property. Since the email is unique, the index should also be unique.  To do so, you specify the third argument of the createIndex() method { unique: true }.
 
   // 4) Insert data into object stores
