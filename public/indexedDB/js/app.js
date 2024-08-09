@@ -1,5 +1,5 @@
 (function () {
-  
+
   // 1.)Check if the IndexedDB is supported
 
   // The following code checks if a web browser supports the indexedDB:
@@ -215,7 +215,7 @@ function getContactByEmail(db, email) {
 
 // - First, get the email index object from the Contacts object store.
 
-// - Second, use t he index to read teh data by calling the get() method.
+// - Second, use the index to read teh data by calling the get() method.
 
 // - Third, sow the result in the onsuccess event handler if of the query.
 
