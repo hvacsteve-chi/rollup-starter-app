@@ -270,5 +270,4 @@ request.onsuccess = (event) => {
   deleteContact(db, 1);
 };
 
-}
 })();
