@@ -90,4 +90,75 @@
   // You can open a transaction in one of two modes: readwrite or readonly.  The readwrite mode allows hou to read data from and write data to the database while the readonly mode allows you to only read data from the database.
   // It's a good practice to open readonly transaction if you need to read data from a database only.
   // After defining the insertContact() function, you can call it in the onsuccess event handler of the request to insert one or more contacts like this:
+
+  request.onsuccess = (event) => {
+    const db = event.target.result;
+
+    insertContact(db, {
+      email: 'john.doe@outlook.com',
+      firstName: 'John',
+      lastName: 'Doe'
+    });
+
+    insertContact(db, {
+      email: 'jane.doe@gmail.com',
+      firstName: 'Jane',
+      lastName: 'Doe'
+    });
+  };
+
+  // Now, if you open the index.html file in ghe web browser, the code in the app.js will execute to:
+
+  // - Create the CRM database in the IndexedDB.
+  // - Create the Contacts object store in the CRM database.
+  // - Insert two records into the object store.
+
+  // If you open the devtools on the web browser, you'll see the CRM database with the Contact object store.  And in the Contacts object store, you'll see the data there as shown in the following picture:
+
+  // 5) Read data from the object store by key
+
+  // To read an object by its key, you use the get() method of teh object store.  The following getContactById() function finds a contact by an id:
+function getContactById(db, id) {
+  const txn = db.transaction('Contacts', 'readonly');
+  const store = txn.objectStore('Contacts');
+  let query = store.get(id);
+
+  query.onsuccess = (event) => {
+    if(!event.target.result) {
+      console.log(`The contact with ${id} not found`);
+    } else {
+      console.table(event.target.result);
+    }
+  };
+  
+  query.onerror = (event) => {
+    console.log(event.target.errorCode);
+  }
+
+  txn.oncomplete = function () {
+    db.close();
+  };
+};
+// When you call the get() method of the object store, it returns a query that will execute asynchronously.
+// Because the query can succeed or fail, you need to assign the onsuccess and onerror handlers each case.
+// If the query succeeded, you'll get the result in the event.target.result.  Otherwise, you'll get an error code via event.target.errorCode.
+// The following code closes the connection to the database once the transaction completes:
+
+txn.oncomplete = function () {
+  db.close();
+};
+
+// Actually, the database connection is closed only when when all the transactions are completed.
+// The following calls the getContactById() in the onsuccess event handler to get the contact with id 1.
+
+request.onsuccess = (event) => {
+  const db = event.target.results;
+  getContactById(db, 1);
+};
+
+// 6) Read data from the object store by an index
+// The following defines a new function called getContactByEmail() that uses the email index to query data:
+
+
+
 })();
