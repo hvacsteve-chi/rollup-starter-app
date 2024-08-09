@@ -159,6 +159,43 @@ request.onsuccess = (event) => {
 // 6) Read data from the object store by an index
 // The following defines a new function called getContactByEmail() that uses the email index to query data:
 
+function getContactByEmail(db, email) {
+  const txn = db.transaction(
+    'Contacts', 'readonly');
+    const store = txn.objectStore('Contacts');
+
+    // get the index from the Object Store
+    const index = store.index('email');
+    // query by indexes
+    let query = index.get(email);
+
+    // return the result object on success
+    query.onsuccess = (event) => {
+      console.log(event.target.errorCode);
+    }
+
+    // close the database connection
+    txn.oncomplete = function(){
+      db.close();
+    };
+}
+
+// HOw it works.
+
+// - First, get the email index object from the Contacts object store.
+// - Second, use t he index to read teh data by calling the get() method.
+// - Third, sow the result in the onsuccess event handler if of the query.
+
+// The following illustrates how to use the getContactsByEmail() function in the onsuccess event handler:
+request.onsuccess = (event) => {
+  const db = event.target.result;
+// get contact by email
+  getContactByEmail(db, 'jane.doe@gmail.com');
+};
+
+// 7) Read all data from an object store
+// The following shows how to use a cursor to read all the objects from the Contacts object store:
+
 
 
 })();
