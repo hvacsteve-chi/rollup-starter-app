@@ -10,8 +10,8 @@ html {
   overflow: hidden;
   white-space: normal;
   text-overflow: ellipsis;
-  text-wrap:balance;
-  -webkit-overscroll-behavior:contain;
+  text-wrap: balance;
+  -webkit-overscroll-behavior: contain;
   overscroll-behavior: contain;
   overflow-wrap: break-word;
   accent-color: auto;
@@ -35,11 +35,7 @@ body {
   color: #f2f2f2;
 }
 .material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
 }
 header {
   height: 100%;
@@ -48,57 +44,56 @@ header {
   background: pink;
   color: black;
 }
-header .header-wrapper{
-  margin:auto;
-  height:calc(100% - 2px);
-  width:calc(100% - 2px);
+header .header-wrapper {
+  margin: auto;
+  height: calc(100% - 2px);
+  width: calc(100% - 2px);
   display: grid;
   place-items: center;
   grid-template-columns: auto 1fr auto;
-  background:rgba(177, 176, 176, 0.76);
-  border:1px solid white;
+  background: rgba(177, 176, 176, 0.76);
+  border: 1px solid white;
 }
-header .header-wrapper nav{
+header .header-wrapper nav {
   margin: 0 6px 0 4px;
-  height:48px;
-  width:48px;
-  background:hsla(0, 0%, 100%, 0.76);
-  display:flex;
+  height: 48px;
+  width: 48px;
+  background: hsla(0, 0%, 100%, 0.76);
+  display: flex;
   justify-content: center;
   align-items: center;
-  border-radius:4px;
+  border-radius: 4px;
   appearance: none;
-  -webkit-user-select:none;
+  -webkit-user-select: none;
   user-select: none;
   cursor: pointer;
-  outline:none;
+  outline: none;
   -webkit-tap-highlight-color: transparent;
-  tap-highlight-color:transparent;
+  tap-highlight-color: transparent;
   touch-action: manipulation;
-  transition:all;
-  will-change:auto;
+  transition: all;
+  will-change: auto;
 }
-header .header-wrapper nav:is(:hover,:focus){
-  background:hsla(0, 0%, 100%, 0.46);
+header .header-wrapper nav:is(:hover, :focus) {
+  background: hsla(0, 0%, 100%, 0.46);
   transform: all 200ms ease-in-out;
 }
-header .header-wrapper h1{
-  font-size:calc(2.8rem + 0.18vw);
+header .header-wrapper h1 {
+  font-size: calc(2.8rem + 0.18vw);
 }
 main {
   height: 100%;
   background: lightblue;
   color: black;
 }
-main .main-wrapper{
-  margin:auto;
-  height:calc(100% - 2px);
-  width:calc(100% - px);
+main .main-wrapper {
+  margin: auto;
+  height: calc(100% - 2px);
+  width: calc(100% - px);
   display: grid;
   place-items: center;
-  background:rgba(119, 166, 182, 0.76);
-  border:1px solid white;
-
+  background: rgba(119, 166, 182, 0.76);
+  border: 1px solid white;
 }
 footer {
   height: 100%;
@@ -106,14 +101,14 @@ footer {
   background: lightgreen;
   color: black;
 }
-footer .footer-wrapper{
-  margin:auto;
-  height:calc(100% - 2px);
-  width:calc(100% - 2px);
+footer .footer-wrapper {
+  margin: auto;
+  height: calc(100% - 2px);
+  width: calc(100% - 2px);
   display: grid;
   place-items: center;
-  background:rgba(137, 180, 137, 0.76);
-  border:1px solid white;
+  background: rgba(137, 180, 137, 0.76);
+  border: 1px solid white;
 }
 
 @media (prefers-color-scheme: light) {
